@@ -57,6 +57,10 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "port": 8083,
+            "host": "0.0.0.0"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
