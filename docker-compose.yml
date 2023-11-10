@@ -1,7 +1,7 @@
 version: '3'
 services:
   angular_frontend:
-    container_name: angular_app
+    container_name: ChatHub-front
     build:
       context: .
       dockerfile: Dockerfile
