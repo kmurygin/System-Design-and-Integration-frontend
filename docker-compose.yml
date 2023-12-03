@@ -2,6 +2,7 @@ version: '3'
 
 services:
   angular-app:
+    container_name: angular-frontend
     build:
       context: .
       dockerfile: Dockerfile
