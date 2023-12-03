@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "NODEJS_HOME"
+    }
+    
     stages {
         stage('Build and Test') {
             steps {
