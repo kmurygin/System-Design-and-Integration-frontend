@@ -9,4 +9,4 @@ Make sure you have docker daemon running.
 `docker-compose build`
 
 ## Running container
-Run `docker-compose up` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`docker-compose up`
