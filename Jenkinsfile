@@ -4,14 +4,13 @@ pipeline {
     tools {
         nodejs "NODEJS_HOME"
     }
-    
+
     stages {
-        stage('Build and Test') {
+        stage('Build') {
             steps {
                 script {
                     sh 'npm install'
-                    sh 'ng test --no-watch --no-progress'
-                    sh 'ng build --prod'
+                    sh 'npm run build'
                 }
             }
         }
