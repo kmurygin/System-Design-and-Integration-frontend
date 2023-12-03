@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy to Docker Container') {
             steps {
                 script {
-                    sh "docker-compose up"
+                    sh "docker-compose up -d"
                 }
             }
         }
