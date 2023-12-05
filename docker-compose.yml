@@ -1,9 +1,10 @@
 version: '3'
+
 services:
-  angular_frontend:
-    container_name: ChatHub-front
+  angular-app:
+    container_name: angular-frontend
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8083:8083"
+      - "8083:80"
