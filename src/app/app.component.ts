@@ -9,3 +9,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 export class AppComponent {
   title = 'ChatHub';
 }
+
+export interface User{
+  id: number,
+  login: string,
+  name: string,
+  surname: string,
+  age: number
+}
