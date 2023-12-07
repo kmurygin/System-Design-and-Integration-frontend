@@ -15,6 +15,22 @@ pipeline {
             }
         }
 
+        stage('Run tests') {
+            steps {
+                script {
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                script {
+                    sh 'npm publish'
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
