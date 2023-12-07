@@ -10,6 +10,6 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   getUserList(){
-    return this.httpClient.get<Array<User>>("http://localhost:8080/users");
+    return this.httpClient.get<Array<User>>("http://192.168.162.223:8080/users");
   }
 }
