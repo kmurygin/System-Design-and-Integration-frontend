@@ -1,6 +1,5 @@
-<h2>List of users</h2>
-
-<div *ngIf="users.length > 0">
+<div id="users" *ngIf="users.length > 0">
+  <h2>List of users</h2>
   <div *ngFor="let user of users">
     <h3>User o id: {{ user.id }}</h3>
     <p>Login: {{ user.login }}</p>
@@ -9,5 +8,4 @@
     <p>Age: {{ user.age }}</p>
     <br><br>
   </div>
-
 </div>
