@@ -2,11 +2,12 @@
 
 <div *ngIf="users.length > 0">
   <div *ngFor="let user of users">
-    <p>{{ user.id }}</p>
-    <p>{{ user.login }}</p>
-    <p>{{ user.name }}</p>
-    <p>{{ user.surname }}</p>
-    <p>{{ user.age }}</p>
+    <h3>User o id: {{ user.id }}</h3>
+    <p>Login: {{ user.login }}</p>
+    <p>Name: {{ user.name }}</p>
+    <p>Surname: {{ user.surname }}</p>
+    <p>Age: {{ user.age }}</p>
+    <br><br>
   </div>
 
 </div>
