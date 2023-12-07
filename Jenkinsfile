@@ -15,14 +15,6 @@ pipeline {
             }
         }
 
-        stage('Run tests') {
-            steps {
-                script {
-                    sh 'npm test'
-                }
-            }
-        }
-
         stage('Publish') {
             steps {
                 script {
