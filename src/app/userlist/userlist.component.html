@@ -11,13 +11,13 @@
 <div id="container">
   <div *ngFor="let user of users">
     <div class="row mb-2 justify-content-center">
-      <div class="col-md-6 siemasiema">
-        <a class="user_latest_message" href="/">
+      <div class="col-md-6">
+        <a class="user_latest_message" href="/messages">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-100 position-relative">
             <div class="col-auto d-none d-lg-block">
               <img alt="" src="assets/img/steve.png" width="140" height="140">
             </div>
-            <div class="col p-4 d-flex flex-column position-static siema">
+            <div class="col p-4 d-flex flex-column position-static one_user">
               <h1>{{ user.name }} {{ user.surname }}</h1>
               {{ user.name }}: Siema mordo, robiles moze taska nowego?
             </div>
