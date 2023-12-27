@@ -1,0 +1,29 @@
+.mat-toolbar {
+  background-color: cornflowerblue;
+  color: white;
+}
+.mat-button {
+  color: white;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.chathub_logo {
+  font-size: 320px;
+}
+
+.container {
+  width: 1100px;
+}
+
+.navbar {
+  font-size: 20px;
+  border-radius:20px;
+  padding: 20px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
