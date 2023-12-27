@@ -12,12 +12,14 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserlistComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingpageComponent,
   ],
   imports: [
     BrowserModule,
