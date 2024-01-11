@@ -44,5 +44,9 @@ export class MessagesComponent {
       next: (response: any) => console.log('Post request successful:', response),
       error: (error) => console.error('Error making post request:', error)
     })
+
+    this.formData = {
+      content: null
+    };
   }
 }
