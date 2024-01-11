@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Message } from "../app.component";
 import { MessageService } from "../message.service";
 import { interval } from 'rxjs';
+import { currentUserId } from "../app.component";
 
 @Component({
   selector: 'app-messages',
@@ -34,10 +35,9 @@ export class MessagesComponent {
 
   onSubmit() {
     const jsonPayload = {
-      senderId: 27,
-      recipientId: 28,
+      chatId: 7,
+      userId: currentUserId,
       content: this.formData.content,
-      timestamp: "2028-01-02T14:30:00"
     };
 
     this.messageService.postMessage(jsonPayload).subscribe({
