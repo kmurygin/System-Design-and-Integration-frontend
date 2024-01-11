@@ -19,8 +19,7 @@ export interface User{
 }
 
 export interface Message {
-  senderId: number,
-  recipientId: number,
+  userId: number,
   content: string,
   timestamp: string
 }
