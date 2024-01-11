@@ -7,17 +7,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MessageService {
-  apiUrl: string = "http://localhost:8080/messages/all/27/28";
+  chatIdUrl: string = "http://localhost:8080/chats/1/2";
+  chatUrl: string = "http://localhost:8080/chats/"
   constructor(private httpClient: HttpClient) { }
 
   getMessages(){
-    return this.httpClient.get<Array<Message>>(this.apiUrl);
+    let chatId = this.httpClient.get<number>(this.chatIdUrl);
+    return this.httpClient.get<Array<Message>>(this.chatUrl + 7 +'/messages');
   }
 
   postMessage(formData: any): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return this.httpClient.post("http://localhost:8080/messages/create", formData, { headers });
+    return this.httpClient.post("http://localhost:8080/chats/send", formData, { headers });
   }
 }
