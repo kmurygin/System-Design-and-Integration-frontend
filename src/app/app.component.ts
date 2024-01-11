@@ -24,5 +24,11 @@ export interface Message {
   timestamp: string
 }
 
+export interface Chat {
+  id: number,
+  user1id: number,
+  user2id: number
+}
+
 export let currentUserId : number;
 currentUserId = 1;

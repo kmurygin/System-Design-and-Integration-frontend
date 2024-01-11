@@ -9,7 +9,7 @@
 
 
 <div id="container">
-  <div *ngFor="let user of users">
+  <div *ngFor="let userChat of userWithChats">
     <div class="row mb-2 justify-content-center">
       <div class="col-md-6">
         <a class="user_latest_message" href="/messages">
@@ -18,8 +18,8 @@
               <img alt="" src="assets/img/steve.png" width="140" height="140">
             </div>
             <div class="col p-4 d-flex flex-column position-static one_user">
-              <h1>{{ user.name }} {{ user.surname }}</h1>
-              {{ user.name }}: Siema mordo, robiles moze taska nowego?
+              <h1>{{ userChat.name }} {{ userChat.surname }}</h1>
+              {{ userChat.name }}: Siema mordo, robiles moze taska nowego?
             </div>
         </div>
         </a>
