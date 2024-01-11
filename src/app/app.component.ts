@@ -17,3 +17,10 @@ export interface User{
   surname: string,
   age: number
 }
+
+export interface Message {
+  senderId: number,
+  recipientId: number,
+  content: string,
+  timestamp: string
+}
