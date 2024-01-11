@@ -1,0 +1,25 @@
+div.from_me,
+div.to_me {
+    display: block;
+    position: relative;
+    clear: both;
+    min-width: 400px;
+    max-width: 600px;
+    min-height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border-radius:20px;
+}
+
+
+div.from_me {
+  float: right;
+  margin-right: 20px;
+  background-color: #3D8DAE;
+}
+
+div.to_me {
+  float: left;
+  margin-left: 20px;
+  background-color: darkgray;
+}
