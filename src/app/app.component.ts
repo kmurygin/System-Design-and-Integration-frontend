@@ -23,3 +23,6 @@ export interface Message {
   content: string,
   timestamp: string
 }
+
+export let currentUserId : number;
+currentUserId = 1;
