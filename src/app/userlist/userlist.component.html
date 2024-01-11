@@ -18,8 +18,8 @@
               <img alt="" src="assets/img/steve.png" width="140" height="140">
             </div>
             <div class="col p-4 d-flex flex-column position-static one_user">
-              <h1>{{ userChat.name }} {{ userChat.surname }}</h1>
-              {{ userChat.name }}: Siema mordo, robiles moze taska nowego?
+              <h1>{{ userChat.user.name }} {{ userChat.user.surname }}</h1>
+              {{ userChat.from }}: {{userChat.message.content}}
             </div>
         </div>
         </a>
