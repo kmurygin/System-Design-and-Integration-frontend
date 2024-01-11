@@ -1,0 +1,28 @@
+<div id="container">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="justify-content-center" style="width: 900px; margin-right: auto; margin-left: auto; margin-top: 30px;">
+      <div class="form-inline">
+        <div class="input-group">
+          <input class="form-control mr-sm-2" type="text" placeholder="Write a message"  id="message" name="message" [(ngModel)]="formData.content"  required>
+          <button type="submit" class="btn btn-secondary" [disabled]="myForm.invalid">Search</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="row mb-2 justify-content-center">
+    <div class="col-md-8">
+      <div *ngFor="let message of messages">
+        <div *ngIf="message.userId === 1" class="from_me">
+          <h3> {{ message.timestamp }} </h3>
+          {{ message.content }}
+        </div>
+        <div *ngIf="message.userId !== 1" class="to_me">
+          <h3> {{ message.timestamp }} </h3>
+          {{ message.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

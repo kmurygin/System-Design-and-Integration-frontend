@@ -17,3 +17,12 @@ export interface User{
   surname: string,
   age: number
 }
+
+export interface Message {
+  userId: number,
+  content: string,
+  timestamp: string
+}
+
+export let currentUserId : number;
+currentUserId = 1;

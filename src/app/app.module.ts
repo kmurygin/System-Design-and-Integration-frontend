@@ -13,6 +13,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { MessagesComponent } from "./messages/messages.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     UserlistComponent,
     NavbarComponent,
     LandingpageComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     HttpClientModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
