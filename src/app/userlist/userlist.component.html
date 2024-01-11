@@ -12,7 +12,7 @@
   <div *ngFor="let userChat of userWithChats">
     <div class="row mb-2 justify-content-center">
       <div class="col-md-6">
-        <a class="user_latest_message" href="/messages">
+        <a class="user_latest_message" [routerLink]="['/messages', userChat.message.chatId]">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-100 position-relative">
             <div class="col-auto d-none d-lg-block">
               <img alt="" src="assets/img/steve.png" width="140" height="140">

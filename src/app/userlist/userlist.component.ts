@@ -57,11 +57,12 @@ export class UserlistComponent {
   addLastMessage(user: User, chatId: number) {
     this.messageService.getLastMessage(chatId).subscribe((message) => {
       if (message) {
-        const from = (message.userId === user.id) ? user.name : 'Ty';
+        const from = (message.userId === user.id) ? user.name : 'You';
         this.userWithChats.push({ user, message, from });
       } else {
         const emptyMes: Message = {
           userId: user.id,
+          chatId: chatId,
           content: '',
           timestamp: ''
         };

@@ -20,6 +20,7 @@ export interface User{
 
 export interface Message {
   userId: number,
+  chatId: number,
   content: string,
   timestamp: string
 }

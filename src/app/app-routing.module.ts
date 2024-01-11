@@ -7,7 +7,7 @@ import {MessagesComponent} from "./messages/messages.component";
 const routes: Routes = [
   { path: 'userlist', component: UserlistComponent },
   { path: '', component: LandingpageComponent},
-  { path: 'messages', component: MessagesComponent}
+  { path: 'messages/:chatId', component: MessagesComponent }
 ];
 
 @NgModule({
