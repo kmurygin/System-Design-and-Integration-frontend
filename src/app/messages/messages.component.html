@@ -13,11 +13,11 @@
   <div class="row mb-2 justify-content-center">
     <div class="col-md-8">
       <div *ngFor="let message of messages">
-        <div *ngIf="message.senderId === 27" class="from_me">
+        <div *ngIf="message.userId === 1" class="from_me">
           <h3> {{ message.timestamp }} </h3>
           {{ message.content }}
         </div>
-        <div *ngIf="message.senderId !== 27" class="to_me">
+        <div *ngIf="message.userId !== 1" class="to_me">
           <h3> {{ message.timestamp }} </h3>
           {{ message.content }}
         </div>
