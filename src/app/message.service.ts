@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Message } from "./app.component";
 import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,15 @@ export class MessageService {
   chatUrl: string = "http://localhost:8080/chats/"
   constructor(private httpClient: HttpClient) { }
 
-  getMessages(){
-    let chatId = this.httpClient.get<number>(this.chatIdUrl);
-    return this.httpClient.get<Array<Message>>(this.chatUrl + 7 +'/messages');
+  getMessages(chatId: number){
+    // let chatId = this.httpClient.get<number>(this.chatIdUrl);
+    return this.httpClient.get<Array<Message>>(this.chatUrl + chatId +'/messages');
+  }
+
+  getLastMessage(chatId: number) {
+    return this.httpClient.get<Array<Message>>(this.chatUrl + chatId + '/messages').pipe(
+      map(messages => messages.shift())
+    );
   }
 
   postMessage(formData: any): Observable<any> {
