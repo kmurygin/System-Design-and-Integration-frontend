@@ -8,7 +8,7 @@ import {CreateChatComponent} from "./create-chat/create-chat.component";
 const routes: Routes = [
   { path: 'userlist', component: UserlistComponent },
   { path: '', component: LandingpageComponent},
-  { path: 'messages', component: MessagesComponent},
+  { path: 'messages/:chatId', component: MessagesComponent},
   { path: 'create_chat', component: CreateChatComponent}
 ];
 
