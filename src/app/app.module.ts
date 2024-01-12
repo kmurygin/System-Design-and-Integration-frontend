@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MessagesComponent } from "./messages/messages.component";
 import {FormsModule} from "@angular/forms";
+import { CreateChatComponent } from './create-chat/create-chat.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from "@angular/forms";
     UserlistComponent,
     NavbarComponent,
     LandingpageComponent,
-    MessagesComponent
+    MessagesComponent,
+    CreateChatComponent
   ],
   imports: [
     BrowserModule,
