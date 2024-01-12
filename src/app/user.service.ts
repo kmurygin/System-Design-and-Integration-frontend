@@ -12,4 +12,10 @@ export class UserService {
   getUserList(){
     return this.httpClient.get<Array<User>>("http://localhost:8080/users");
   }
+
+  getUserByLogin(login: string) {
+    let url: string = "http://localhost:8080/users/login/" + login;
+    console.log(url)
+    return this.httpClient.get<Array<User>>(url);
+  }
 }
