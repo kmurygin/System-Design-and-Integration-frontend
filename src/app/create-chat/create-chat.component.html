@@ -1,0 +1,12 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="justify-content-center" style="width: 900px; margin-right: auto; margin-left: auto; margin-top: 30px;">
+      <div class="form-inline">
+        <div class="input-group">
+          <input class="form-control mr-sm-2" type="text" placeholder="User_name"  id="message" name="message" [(ngModel)]="formData.user_name" required>
+          <button type="submit" class="btn btn-secondary" [disabled]="myForm.invalid">Create chat</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
