@@ -20,8 +20,15 @@ export interface User{
 
 export interface Message {
   userId: number,
+  chatId: number,
   content: string,
   timestamp: string
+}
+
+export interface Chat {
+  id: number,
+  user1id: number,
+  user2id: number
 }
 
 export let currentUserId : number;

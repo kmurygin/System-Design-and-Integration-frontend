@@ -3,6 +3,7 @@ import { Message } from "../app.component";
 import { MessageService } from "../message.service";
 import { interval } from 'rxjs';
 import { currentUserId } from "../app.component";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-messages',
@@ -13,8 +14,17 @@ export class MessagesComponent {
   messages: Array<Message> = []
   formData: any = {};
   updateInterval = 2000;
-  constructor(private messageService: MessageService) {
-    this.updateMessages()
+  private chatId: number = 0;
+
+  constructor(private messageService: MessageService, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      this.chatId = +params['chatId'];
+    });
+    this.updateMessages();
+  }
+
+  ngOnInit() {
+    this.startPeriodicUpdates();
   }
 
   startPeriodicUpdates() {
@@ -22,12 +32,9 @@ export class MessagesComponent {
       this.updateMessages();
     });
   }
-  ngOnInit() {
-    this.startPeriodicUpdates();
-  }
 
   updateMessages() {
-    this.messageService.getMessages().subscribe({
+    this.messageService.getMessages(this.chatId).subscribe({
       next: (response) => this.messages = response,
       error: () => console.error("Not able to get messages.")
     })
@@ -35,7 +42,7 @@ export class MessagesComponent {
 
   onSubmit() {
     const jsonPayload = {
-      chatId: 7,
+      chatId: this.chatId,
       userId: currentUserId,
       content: this.formData.content,
     };
