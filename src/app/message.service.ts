@@ -22,4 +22,11 @@ export class MessageService {
     });
     return this.httpClient.post("http://localhost:8080/chats/send", formData, { headers });
   }
+
+  postChat(formData: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.httpClient.post("http://localhost:8080/chats/create", formData, { headers });
+  }
 }
